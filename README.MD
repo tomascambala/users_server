@@ -44,4 +44,4 @@ yarn run test
 ##  Dependencies
 Node JS v18.15.0 
 Yarn: `npm i -g yarn`
-Docker  - [Dowload Link](https://www.docker.com/products/docker-desktop/)
+Docker  - https://www.docker.com/products/docker-desktop/
