@@ -2,12 +2,7 @@
 
 CRUD nodejs app with authentication using JWT is sent via http-only cookie. The server will be available at `http://localhost:8081` 
 
-
-1. Node JS v18.15.0 
-2. Yarn: `npm i -g yarn`
-3. Docker  - [Dowload Link](https://www.docker.com/products/docker-desktop/)
-
-## 💻 Locally setup 
+## setup 
 
 1. **Install the dependencies:**
 
@@ -38,3 +33,8 @@ Basic the Jest test suite with:
 ```sh
 yarn run test
 ``
+
+##  dependencies
+Node JS v18.15.0 
+Yarn: `npm i -g yarn`
+Docker  - [Dowload Link](https://www.docker.com/products/docker-desktop/)
