@@ -1,6 +1,6 @@
 # Intro
 
-CRUD nodejs app with authentication using JWT is sent via http-only cookie. The server will be available at `http://localhost:8081` 
+CRUD nodejs app with authentication using JWT is sent via http-only cookie. The server will be available at `http://localhost:8081`. The app uses "dockerized" PostgresSQL and Seqeulize.
 
 
 ## Endpoints: 
@@ -21,7 +21,7 @@ yarn install
 ```sh
 yarn run build
 ```
-
+(in .swcrc check baseUrl)
 3. **docker:**
 
 ```sh
@@ -32,6 +32,8 @@ docker compose up -d
 ```sh
 yarn run dev
 ```
+
+(export NODE_ENV=development)
 
 ## Testing
 

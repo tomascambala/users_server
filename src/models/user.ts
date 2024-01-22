@@ -41,10 +41,21 @@ User.init(
     email: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: true,
+      },
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        isStrongPassword(value: string) {
+          if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/g.test(value)) {
+            throw new Error('Password is not strong enough');
+          }
+        },
+      },
     },
     firstName: {
       type: DataTypes.STRING,
@@ -57,6 +68,13 @@ User.init(
     phoneNumber: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        isCaseSensitivePhoneNumber(value: string) {
+          if (!/^\d{10}$/g.test(value)) {
+            throw new Error('Invalid phone number format');
+          }
+        },
+      },
     },
     country: {
       type: DataTypes.STRING,

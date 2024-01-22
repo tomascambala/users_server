@@ -8,12 +8,12 @@
   "author": "Tomas Cambala",
   "private": false,
   "scripts": {
-    "dev": "export NODE_ENV=development && concurrently \"yarn run watch-compile\" \"yarn run watch-dev\"",
+    "dev": "NODE_ENV=development concurrently \"yarn run watch-compile\" \"yarn run watch-dev\"",
     "test": "jest",
     "watch-compile": "swc src -w --out-dir dist",
     "watch-dev": "nodemon --watch \"dist/**/*\" -e js ./dist/server.js",
     "build": "swc src -d dist",
-    "start": "export NODE_ENV=production && node dist/server.js"
+    "start": "NODE_ENV=production node dist/server.js"
   },
   "devDependencies": {
     "@jest/globals": "^29.5.0",
@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.1.4",
     "express": "^4.18.2",
